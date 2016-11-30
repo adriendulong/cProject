@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
 }
 
-app.set('port', (process.env.API_PORT || 3001));
+app.set('port', (process.env.PORT || 3001));
 
 app.use('/graphql',(req, res) => {
   res.send({data: false});
